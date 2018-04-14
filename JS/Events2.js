@@ -38,7 +38,7 @@ function getiD() {
 	return iD;
 }
 
-document.getElementById("newForm").addEventListener("submit", addNewPerson(document.getElementById("nameInput").value), 
+document.getElementById("newUser").addEventListener("submit", addNewPerson(document.getElementById("nameInput").value), 
 		document.getElementById("ageInput").value), document.getElementById("occInput").value;
 
 var newEntry = new Person (name, age, occ);
@@ -46,7 +46,7 @@ personData.push(newEntry)
 window.alert("Details saved. iD number: " + counter);
 
 function updatePerson(iDToUpdate, updatedName, updatedAge, updatedOcc){
-	for (i = 0; i < personData.size(); i++) {
+	for (i = 0; i <= personData.size(); i++) {
 		if (personData.get(i).getiD() == iDToUpdate) {
 			personData.get(i).setName(updatedName);
 			personData.get(i).setAge(updatedAge);

@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
-
+<head> 
+	<script src="../JS/Events2.js"></script> 
+</head>
 <body>
 
 <h1> Add User Details below:</h1>
-<form action="/Exercises1b" method="post" id = 'userForm' target="_self">
-<div class = 'newForm'>
+<form id = 'newUser'>
+
 First name: <br>
 <input type="text" id = "nameInput" name = "name" placeholder="Name.."><br>
 Age: <br>
 <input type="text" id = "ageInput" name = "age" placeholder="Age.."><br>
 Occupation: <br>
 <input type="text" id = "occInput" name = "occ" placeholder="Occupation.."><br>
-
-</div>
-<div class = 'form-sub'>
-<button id='subButton' onclick="addNewPerson()">Submit</button>
-</div>
-
-
 </form>
 
-<h1> Or, update your records using your iD and updated name, age and occupation:</h1>
-<form action="/Exercises1b" method="post" id = 'userForm' target="_self">
-<div class = 'upForm'>
+<button id='subButton' onclick="addNewPerson()">Submit</button>
+
+
+<h3> Or, update your records using your iD:</h3>
+
+<form id="updateUser">
 ID: <br>
 <input type="text" id = userID name = "id" placeholder="Current ID.."><br>
 First name: <br>
@@ -32,18 +30,11 @@ Age: <br>
 <input type="text" id = "ageInput" name = "age" placeholder="Updated Age.."><br>
 Occupation: <br>
 <input type="text" id = "occInput" name = "occ" placeholder="Updated Occupation.."><br>
-
-</div>
-<div class = 'form-up'>
-<button id='upButton' onclick="updatePerson(id, name, age, occ)">Update</button>
-</div>
 </form>
 
-<script src="../JS/Events2.js"></script>
+
+<button id='upButton' onclick="updatePerson(id, name, age, occ)">Update</button>
+
 
 </body>
 </html>
-
-
-
-
